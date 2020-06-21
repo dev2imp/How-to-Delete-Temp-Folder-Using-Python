@@ -1,12 +1,12 @@
 import os
 import shutil
-thelink='C:/Users/mypc/AppData/Local/Temp'
-for filename in os.listdir(thelink):
+path='C:/Users/mypc/AppData/Local/Temp'
+for filename in os.listdir(path):
     try:
-       shutil.rmtree(thelink+"/"+filename)
+       shutil.rmtree(path+"/"+filename)
     except:
         try:
-            os.unlink(thelink+"/"+filename)
+            os.unlink(path+"/"+filename)
         except:
             print("can't delete file ",filename)
             
